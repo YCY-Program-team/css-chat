@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --receive-bg: #FFF;
+            --receive-text: black;
+            --page-background: #008040;
+        }
+
+        /* body {
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: normal;
+            max-width: 450px;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--page-background);
+        } */
+
+        .row {
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: normal;
+            max-width: 450px;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: row;
+            background-color: var(--page-background);
+        }
+
+        p {
+            max-width: 255px;
+            word-wrap: break-word;
+            margin-bottom: 12px;
+            line-height: 24px;
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        p:before,
+        p:after {
+            content: "";
+            position: absolute;
+            height: 25px;
+        }
+
+        .receive {
+            background: var(--receive-bg);
+            color: black;
+            align-self: flex-start;
+        }
+
+        .receive:before {
+            top: 0px;
+            left: -8px;
+            height: 20px;
+            width: 12px;
+            background-color: var(--receive-bg);
+            border-bottom-left-radius: 25px;
+        }
+
+        .receive:after {
+            top: 0px;
+            left: -10px;
+            height: 10px;
+            width: 14px;
+            background-color: var(--page-background);
+            border-bottom-left-radius: 20px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+        }
+
+        .blank {
+            width: 20px;
+        }
+
+        .name {
+            text-decoration: underline;
+            font-size: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <table>
+            <tr>
+                <td><img src="https://fakeimg.pl/512x512" class="icon"></td>
+                <td style="padding-left: 12px;">
+                    <div class="name">123123</div>
+                    <p class="receive">relative.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
